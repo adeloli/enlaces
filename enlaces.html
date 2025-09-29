@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Enlaces</title>
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="/favicon-256x256.png">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+  <!-- Estilos -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; font-family: 'Roboto', sans-serif; overflow: hidden; }
+    #particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; background-color: #000; }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    /* Foto de perfil*/
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      object-fit: cover;
+      object-position: top center;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    h1 { font-size: 2.2rem; margin-bottom: 10px; }
+    p.description { font-size: 1rem; margin-bottom: 30px; color: #ddd; }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    a:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+    .github { background-color: #24292e; }
+    .linkedin { background-color: #0077b5; }
+    .portfolio { background-color: #6f42c1; }
+    .blog { background-color: #f48024; }
+
+    footer { margin-top: 40px; color: #ccc; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Fondo animado -->
+  <div id="particles-js"></div>
+
+  <!-- Perfil -->
+  <img src="foto-perfil.jpg" alt="Foto de perfil" class="profile-pic">
+  <h1>Alberto Delgado Oliver</h1>
+  <p class="description">Técnico en Administración de Sistemas y Especialista en Ciberseguridad</p>
+
+  <!-- Enlaces -->
+  <div class="links">
+    <a href="https://github.com/adeloli" class="github" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/alberto-delgado-oliver-33013b274/" class="linkedin" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://adeloli.github.io/" class="portfolio" target="_blank">
+      <i class="fas fa-laptop-code"></i> Portfolio
+    </a>
+    <a href="https://adeloli.hashnode.dev" class="blog" target="_blank">
+      <i class="fas fa-blog"></i> Blog
+    </a>
+  </div>
+
+  <footer>© 2025 Alberto Delgado Oliver. Todos los derechos reservados.</footer>
+
+  <!-- Fondo animado tsparticles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("particles-js", {
+        fullScreen: { enable: true },
+        particles: {
+            number: { value: 80 },
+            color: { value: "#00ffdd" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5 },
+            size: { value: 3 },
+            links: { enable: true, distance: 150, color: "#00ffdd", opacity: 0.4, width: 1 },
+            move: { enable: true, speed: 0.5 }
+        },
+        interactivity: {
+            events: { onHover: { enable: true, mode: "grab" }, onClick: { enable: true, mode: "push" } }
+        }
+    });
+
+  </script>
+
+</body>
+</html>
+
